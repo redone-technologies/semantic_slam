@@ -1,0 +1,40 @@
+<!-- goal1  attribute_name : visited_cp key:cp / value:tri_column10 -->
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="cp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#visited_cp</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column10</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+<!-- goal2  attribute_name : visited_cp_hp key:cp / value:tri_column6 ,  key:hp / value:hp -->
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="cp"/>
+    <variable name="hp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#visited_cp_hp</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column6</uri>
+      </binding>
+      <binding name="hp">
+        <uri>http://www.ses-plan.org/convention#hp</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>

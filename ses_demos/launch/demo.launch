@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+
+	<include file="$(find rosplan_demos)/launch/semantic_slam.launch" />
+
+	<include file="$(find tosm_db_handler)/launch/redone_db_interface.launch" />
+
+	<node pkg="semantic_slam_db_interface" name="ses_db_interface_node" type="ses_db_interface_node" output="screen" >
+		<param name="file_dir" type="str" value="$(find semantic_slam_db_interface)/config/" />
+	</node>
+	
+
+	<node pkg="redone" name="executer_node" type="executer_node" output="screen">
+		
+		<!-- selsect robot - only one => robot size change	=> check door width -->
+		<!-- <param name="robot_name" type="str" value="nrlab02" /> -->
+		<!-- <param name="robot_name" type="str" value="kirobot" /> -->
+		<param name="robot_name" type="str" value="anv" />
+
+		<!-- initial position -->
+		<param name="robot_at" type="str" value="corridor32" />
+
+		<!-- goal position -->
+		<param name="goal" type="str" value="corridor31" />
+		
+		<!-- open check enable = 1, disable = 0 -->
+		<param name="check_door_open_time" type="int" value="1" />
+		<!-- door size check enable = 1, disable = 0 -->
+		<param name="check_door_width" type="int" value="0" />
+		<!-- file path -->
+		<param name="file_dir" type="str" value="$(find semantic_slam_db_interface)/config/" />
+	</node>
+
+</launch>

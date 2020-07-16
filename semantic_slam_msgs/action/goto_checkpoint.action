@@ -1,0 +1,10 @@
+#goal definition
+int32 typeInfo
+string name
+---
+#result definition
+int32 result
+---
+#feedback
+int32 status
+

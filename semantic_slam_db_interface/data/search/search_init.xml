@@ -1,0 +1,962 @@
+<!-- init1 - attribute_name:robot_at_hp  // key:v , value:ugv // key:wp , value: hp-->
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="v"/>
+    <variable name="hp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#robot_at_hp</uri>
+      </binding>
+      <binding name="v">
+        <uri>http://www.ses-plan.org/convention#ugv</uri>
+      </binding>
+      <binding name="hp">
+        <uri>http://www.ses-plan.org/convention#hp</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="cp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column1</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column17</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column18</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column19</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column20</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column8</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column9</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column1</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column8</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_checkpoint</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column9</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="cp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column1</uri> 
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column9</uri> 
+      </binding>
+    </result>    
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column8</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column1</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column8</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area0</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column9</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area1</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area1</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area1</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area1</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area1</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area1</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area2</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column17</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area2</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column18</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area2</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column19</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area2</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column20</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="ar"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area</uri>
+      </binding>
+      <binding name="ar">
+        <uri>http://www.ses-plan.org/convention#corridor1</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area</uri>
+      </binding>
+      <binding name="ar">
+        <uri>http://www.ses-plan.org/convention#corridor2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_area</uri>
+      </binding>
+      <binding name="ar">
+        <uri>http://www.ses-plan.org/convention#corridor3</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="hp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#is_homepoint</uri>
+      </binding>
+      <binding name="hp">
+        <uri>http://www.ses-plan.org/convention#hp</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="cp1"/>
+    <variable name="cp2"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column1</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column11</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column12</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column13</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column14</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column15</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column16</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column17</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column18</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column18</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column19</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column19</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column20</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column2</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column3</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column4</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column5</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column6</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column7</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column8</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column8</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column9</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#column9</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#column10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column10</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column9</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column2</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column1</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column4</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column5</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column6</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column7</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column8</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp</uri>
+      </binding>
+      <binding name="cp1">
+        <uri>http://www.ses-plan.org/convention#tri_column9</uri>
+      </binding>
+      <binding name="cp2">
+        <uri>http://www.ses-plan.org/convention#tri_column8</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="cp"/>
+    <variable name="ar"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp_ar</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column10</uri>
+      </binding>
+      <binding name="ar">
+        <uri>http://www.ses-plan.org/convention#corridor2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp_ar</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column10</uri>
+      </binding>
+      <binding name="ar">
+        <uri>http://www.ses-plan.org/convention#corridor1</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="ar"/>
+    <variable name="cp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_ar_cp</uri>
+      </binding>
+      <binding name="ar">
+        <uri>http://www.ses-plan.org/convention#corridor1</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column9</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_ar_cp</uri>
+      </binding>
+      <binding name="ar">
+        <uri>http://www.ses-plan.org/convention#corridor2</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column11</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="cp"/>
+    <variable name="hp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_cp_hp</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#tri_column6</uri>
+      </binding>
+      <binding name="hp">
+        <uri>http://www.ses-plan.org/convention#hp</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="attribute_name"/>
+    <variable name="hp"/>
+    <variable name="cp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="attribute_name">
+        <uri>http://www.ses-plan.org/convention#connected_hp_cp</uri>
+      </binding>
+      <binding name="hp">
+        <uri>http://www.ses-plan.org/convention#hp</uri>
+      </binding>
+      <binding name="cp">
+        <uri>http://www.ses-plan.org/convention#column1</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>

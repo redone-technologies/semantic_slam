@@ -1,0 +1,3153 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ses/tosm"
+     xml:base="http://www.semanticweb.org/ses/tosm"
+     xmlns:xs="http://www.w3.org/TR/xmlschema-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tosm="http://www.semanticweb.org/ses/tosm"
+     xmlns:tosm1="http://www.semanticweb.org/ses/tosm#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ses/tosm">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ses/tosm/0.1.0"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The TOSM-based database for the KDJ convention center.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isAboveOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isAboveOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isBehindOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isBehindOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isConnectedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#spatialRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isInFrontOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isInFrontOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isInsideOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isInsideOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#spatialRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isLocatedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#robotRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Robot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isLookingAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isLookingAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#robotRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Robot"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isNextTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isNextTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#spatialRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#isOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#robotRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#robotRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#spatialRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ses/tosm#spatialRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#symbolicModel"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Place"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#availableTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#availableTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#boundary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#boundary">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#explicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>boundary</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#canBeOpen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#canBeOpen">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Door"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#capability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#capability">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Robot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#color -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#color">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#explicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#complexity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#coordinateFrame -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#coordinateFrame">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#explicitModel"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Place"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#explicitModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#explicitModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#implicitModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#implicitModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isKeyObject -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#isKeyObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isLeafPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#isLeafPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The implicit model of Place.
+This property means the place is a leaf place that doesn&apos;t have any child place represented by isInsideOf property.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isMovable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#isMovable">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#isOpen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#isOpen">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Door"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#level">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Floor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#symbolicModel"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Place"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#pose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#pose">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#explicitModel"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#purpose">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Robot"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#roomNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#roomNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#implicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#size">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#explicitModel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#symbolicModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#symbolicModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#velocity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ses/tosm#velocity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ses/tosm#explicitModel"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#AutomaticDoor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#AutomaticDoor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Door"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Base -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Base">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#OutdoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Cafe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Cafe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Chair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Chair">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Furniture"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ses/tosm#Table"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Column -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Column">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Corridor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Corridor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Door -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Door">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Doorway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Doorway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Driver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Driver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Elevator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Elevator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#ElevatorDoor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#ElevatorDoor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Door"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#EnvironmentalElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#EnvironmentalElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Escalator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Escalator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Floor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Floor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Furniture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Furniture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#GuideSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#GuideSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Sign"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ses/tosm#SafetySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#HingedDoor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#HingedDoor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Door"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#IndoorPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#IndoorPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ses/tosm#OutdoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#InformationCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#InformationCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#KDJHall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#KDJHall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#EnvironmentalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Occupant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Occupant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#OutdoorPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#OutdoorPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Pedestrian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Pedestrian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Place">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#EnvironmentalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Road -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Road">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#OutdoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#EnvironmentalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Room">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#SafetySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#SafetySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Sign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Sidewalk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Sidewalk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#OutdoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Sign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Sign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Staircase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Staircase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#IndoorPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#Table -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#Table">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#VendingMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#VendingMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Device"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ses/tosm#WaterPurifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#WaterPurifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ses/tosm#WaterPurifier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ses/tosm#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#automaticdoor111 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#automaticdoor111">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#AutomaticDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway111"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automaticdoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[14, 19.8, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[6.0, 0.7, 1.3]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#automaticdoor114 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#automaticdoor114">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#AutomaticDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway114"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automaticdoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[19.3, 15.9, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.0, 0.5, 2.5]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#automaticdoor121 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#automaticdoor121">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#AutomaticDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway121"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automaticdoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[19.2, 12.1, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.0, 0.5, 2.5]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#automaticdoor315 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#automaticdoor315">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#AutomaticDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway315"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automaticdoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[49, 14.3, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[5.0, 0.5, 1.3]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#building1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#building1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Building"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor13"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor14"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [2.53, 22.8], [2.6, 19.8], [24.2, 19.8], [24.2, 22.8] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [11.4, 19.8], [11.4, 16.2], [16.9, 16.2], [16.9, 19.8] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [24.2, 22.8], [24.2, 19.8], [35.2, 19.8], [35.2, 22.9] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#doorway114"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [17.5, 19.8], [24.2, 19.8], [24.2, 15.9], [17.2, 16] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [46.4, 12.8], [49.6, 12.9], [49.6, 23.8], [46.4, 23.8] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor13"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor15"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#doorway17"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room120"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [35.2, 22.9], [35.2, 19.8], [46.2, 20.2], [46.2, 23.8] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [17.2, 16], [17.1, 12.2], [24.1, 12.2], [24.2, 15.9] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor22"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [80.7, 11.5], [81, 14.5], [95.6, 13.2], [95.4, 10.5] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor210 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor210">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [1.78, 14.3], [9.4, 14.8], [9.6, 11.8], [1.8, 11.4] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor211 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor211">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor21"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [88, 11], [91.3, 10.6], [91, 7], [87.7, 7.2] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor24"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [69.5, 15.1], [69.2, 11.9], [80.7, 11.5], [81, 14.5] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [66.8, 15.1], [66.9, 22.3], [69.4, 22.3], [69.5, 15.1] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor23"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor26"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [59.2, 15], [69.5, 15.1], [69.2, 11.9], [59.1, 12] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [53.9, 12], [59.1, 12], [59.2, 8.4], [53.7, 8.5] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor25"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor27"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [44.8, 15.1], [59.2, 15], [59.1, 12], [44.7, 12.2] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor28"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [31.4, 16], [44.7, 15.9], [44.6, 11.5], [31.4, 11.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor29"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [23.7, 15.3], [31.4, 15.4], [31.4, 11.7], [23.7, 12.4] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor210"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [9.4, 14.8], [23.7, 15.3], [23.7, 12.4], [9.6, 11.8] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor2</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor32"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor34"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [59.7, 17], [59.7, 14.2], [88.4, 13.5], [88.3, 16.5] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [37.6, 18.1], [37.5, 15], [59.7, 14.2], [59.7, 17] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#staircase1"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [46.3, 14.6], [46.1, 10.9], [51.7, 10.8], [51.8, 14.3] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [59.8, 24.4], [59.7, 17], [62, 17], [62.1, 24.3] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [80.9, 13.6], [80.8, 9.71], [84.3, 9.83], [84.4, 13.5] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor32"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [24.4, 19.3], [24.3, 14.7], [37.3, 14.3], [37.6, 18.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor36"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [23.6, 18.5], [23.7, 15.4], [24.3, 15.4], [24.3, 18.5] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor37"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [17.2, 18.3], [17.3, 14.5], [23.6, 14.9], [23.6, 18.5] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#corridor39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#corridor39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Corridor"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor31"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor35"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#doorway31"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#doorway32"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#doorway35"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [73.8, 16.8], [88.3, 16.5], [88.4, 13.5], [73.6, 13.6] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corridor3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway110 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway110">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor15"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room110"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway111 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway111">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor11"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor12"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway112 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway112">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor12"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#corridor12"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway113 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway113">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#elevator2"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway114 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway114">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor17"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</tosm1:ID>
+        <tosm1:availableTime>9, 18</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway115 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway115">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor15"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#elevator2"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway116">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor15"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room116"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</tosm1:ID>
+        <tosm1:availableTime>9, 18</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway117 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway117">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor15"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room117"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</tosm1:ID>
+        <tosm1:availableTime>9, 18</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway119">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor11"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</tosm1:ID>
+        <tosm1:availableTime>9, 18</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway121 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway121">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor17"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#sidewalk1"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</tosm1:ID>
+        <tosm1:availableTime>9, 18</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor13"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room13"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor13"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room14"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor13"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room15"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor13"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room16"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room17"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor13"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room18"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor15"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room19"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door1</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room31"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway310 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway310">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor32"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room310"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway311 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway311">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor32"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room311"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway314 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway314">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor34"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room314"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway315 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway315">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor32"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor33"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway316 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway316">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor33"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#elevator1"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#corridor33"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway317 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway317">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor35"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#elevator2"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway319 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway319">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor38"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room319"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room32"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor31"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room33"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor31"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room34"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room35"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor31"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room36"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor31"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room37"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor32"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room38"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#doorway39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#doorway39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Doorway"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor32"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#room39"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:availableTime>0, 24</tosm1:availableTime>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">door3</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#elevator1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#elevator1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Elevator"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#doorway112"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#building1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevator</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#elevator2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#elevator2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Elevator"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#building1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevator</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#elevatordoor112 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#elevatordoor112">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#ElevatorDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway112"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevatordoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[14.1, 16.3, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#elevatordoor113 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#elevatordoor113">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#ElevatorDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway113"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevatordoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[53.7, 18.5, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.2, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#elevatordoor115 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#elevatordoor115">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#ElevatorDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway115"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevatordoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[49.6, 18, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.2, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#elevatordoor316 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#elevatordoor316">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#ElevatorDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway316"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevatordoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[48.8, 10.8, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#elevatordoor317 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#elevatordoor317">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#ElevatorDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway317"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevatordoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[84.4, 11, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.0, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#floor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#floor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Floor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#building1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isLeafPlace>
+        <tosm1:level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:level>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">floor</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#floor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#floor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Floor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#building1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isLeafPlace>
+        <tosm1:level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:level>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">floor</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#floor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#floor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Floor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#building1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isLeafPlace>
+        <tosm1:level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:level>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">floor</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor110 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor110">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway110"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[48.3, 13.1, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor116">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway116"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[49.6, 16.4, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor117 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor117">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway117"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[49.7, 14.1, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor119">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway119"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.56, 20.4, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.5, 0.5, 0.5]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway13"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[25.1, 22.9, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway14"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[28.5, 22.9, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway15"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[34.4, 23.1, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway16"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[30.5, 19.8, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway17"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[37.8, 19.9, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway18"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[46.3, 18, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway19"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor1</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[49.6, 22, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway31"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[86.1, 16.7, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor310 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor310">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway310"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[42.4, 17.9, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor311 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor311">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway311"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[54.5, 14.2, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor314 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor314">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway314"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[60.6, 24.4, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor319 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor319">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway319"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[16.9, 16.9, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.5, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway32"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[76.1, 16.8, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway33"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[71.8, 16.7, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway34"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[65.3, 16.9, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway35"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[79.9, 13.5, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway36"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[72.7, 13.7, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway37"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[65.6, 13.8, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway38"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[56.1, 17.3, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#hingeddoor39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#hingeddoor39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#doorway39"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:canBeOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:canBeOpen>
+        <tosm1:color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0]</tosm1:color>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isKeyObject>
+        <tosm1:isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isMovable>
+        <tosm1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isOpen>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hingeddoor3</tosm1:name>
+        <tosm1:pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[50.1, 17.5, 0.0, 0, 0, 0, 1]</tosm1:pose>
+        <tosm1:size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.9, 0.2, 2.1]</tosm1:size>
+        <tosm1:velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0, 0, 0, 0, 0, 0]</tosm1:velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room11">
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor11"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [2.6, 19.8], [7.5, 19.7], [8.4, 12.9], [3.3, 12.9] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room110 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room110">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [46.4, 12.8], [49.6, 12.9], [49.6, 16], [46.4, 16] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">110</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room116">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [49.6, 17.3], [49.6, 14], [51.9, 14], [51.9, 17.3] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">116</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room117 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room117">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [49.6, 14], [49.6, 12.9], [51.9, 12.9], [51.9, 14] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">117</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room119">
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor11"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [49.6, 24], [49.6, 20.3], [51.9, 20.4], [52, 24] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">119</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room12">
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor11"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [7.5, 19.7], [11.4, 19.8], [11.4, 12.7], [8.4, 12.9] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room120 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room120">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [34.8, 33.2], [35.2, 22.9], [42.6, 23.8], [42.4, 33.4] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">120</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room13">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [24.2, 22.8], [27.8, 23], [27.8, 26.7], [24.2, 26.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room14">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [27.8, 23], [31.9, 22.9], [31.9, 26.7] ,[27.8, 26.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room15">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [31.9, 22.9], [35.2, 22.9], [35.1, 26.7], [31.9, 26.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room16">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [24.2, 19.8], [31.6, 19.8], [31.6, 8.7], [24.2, 8.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room17">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [31.6, 19.8], [39.1, 20], [39.1, 8.7], [31.6, 8.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room18">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [39.1, 20], [46.2, 20], [46.2, 8.7], [39.1, 8.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room19">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [71.4, 27.3], [73.8, 27.4], [73.8, 25.7], [71.5, 25.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room1</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room31">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [81, 16.5], [87.7, 16.5], [87.7, 31], [81, 31] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">31</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room310 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room310">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [38.3, 18.1], [45.1, 17.7], [45.1, 24.4], [38.3, 24.4] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">310</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room311 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room311">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [51.8, 14.3], [59.7, 14.2], [59.7, 2.26], [51.8, 2.26] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">311</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room312 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room312">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [43, 14.8], [43, 7.82], [46.3, 7.82], [46.3, 14.3] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">312</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room313 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room313">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [38.2, 15], [38.2, 7.82], [43, 7.82], [43, 14.8] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">313</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room314 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room314">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [59.8, 24.4], [66.3, 24.4], [66.3, 31], [59.8, 31] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">314</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room318 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room318">
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor35"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [80.8, 9.71], [80.8, 2.26], [87.3, 2.13], [87, 9.67] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">318</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room319 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room319">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [2.89, 29.1], [17, 29.4], [3.08, 14.9], [16.8, 15] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">319</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room32">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [73.8, 16.5], [81, 16.5], [81, 31], [73.8, 31] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room33">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [66.3, 16.5], [73.8, 16.5], [73.8, 31], [66.3, 31] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room34">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [62.1, 24.3], [62, 17], [66.3, 16.5], [66.3, 24.3] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">34</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room35">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [73.6, 13.6], [80.9, 13.6], [80.8, 2.26], [73.6, 2.26] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room36">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [66.5, 13.6], [73.6, 13.6], [73.6, 2.26], [66.5, 2.26] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room37">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [59.7, 14.2], [66.5, 13.6], [66.5, 2.26], [59.7, 2.26] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room38">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [52.4, 17.4], [59.7, 17], [59.8, 24.4], [52.4, 24.4] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#room39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#room39">
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#floor3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [45.1, 17.7], [52.4, 17.4], [52.4, 24.4], [45.1, 24.4] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room3</tosm1:name>
+        <tosm1:purpose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meeting</tosm1:purpose>
+        <tosm1:roomNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">39</tosm1:roomNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#sidewalk1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#sidewalk1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Sidewalk"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#sidewalk2"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [17.1, 12.2], [24.1, 12.2], [17.2, 2.8], [23.7, 2.7] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sidewalk</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#sidewalk2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#sidewalk2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Sidewalk"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#sidewalk3"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [24, 18.46], [23.7, 2.7], [53.4, 8.7], [53.4, 3.1] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sidewalk</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#sidewalk3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#sidewalk3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Sidewalk"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#sidewalk4"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [53.4, 8.7], [53.4, 3.1], [61.5, 8.4] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sidewalk</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#sidewalk4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#sidewalk4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Sidewalk"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#doorway113"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [53.8, 24], [53.4, 8.7], [61.5, 8.4], [63, 24.9] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sidewalk</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ses/tosm#staircase1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ses/tosm#staircase1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ses/tosm#Staircase"/>
+        <tosm1:isConnectedTo rdf:resource="http://www.semanticweb.org/ses/tosm#corridor12"/>
+        <tosm1:isInsideOf rdf:resource="http://www.semanticweb.org/ses/tosm#building1"/>
+        <tosm1:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</tosm1:ID>
+        <tosm1:boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[ [], [], [], [] ]</tosm1:boundary>
+        <tosm1:complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</tosm1:complexity>
+        <tosm1:coordinateFrame rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</tosm1:coordinateFrame>
+        <tosm1:isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</tosm1:isLeafPlace>
+        <tosm1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staircase</tosm1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#AutomaticDoor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#ElevatorDoor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#HingedDoor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Building"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Road"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Sidewalk"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Cafe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Corridor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Doorway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Elevator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Floor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Staircase"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Device"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Door"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Furniture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Sign"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Driver"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Occupant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Pedestrian"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Place"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ses/tosm#Robot"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

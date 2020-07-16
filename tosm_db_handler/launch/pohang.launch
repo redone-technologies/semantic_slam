@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="owl_file_path" value="$(find tosm_db_handler)/tosm_owl/"/>
+    <param name="owl_file_name" value="pohang.owl"/>
+    <param name="save_as_owl_file_name" value="pohang_test.owl"/>
+
+    <node pkg="tosm_db_handler" type="query_for_rosplan.py" name="tosm_db_handler" output="screen"/>
+</launch>

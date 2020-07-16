@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- robot name - anv, kirobot, nrlab02 -->
+	<node pkg="redone" name="executer_node" type="executer_node" output="screen">
+		<param name="robot_name" type="str" value="nrlab02" />
+		<param name="robot_at" type="str" value="room22" />
+		<param name="goal" type="str" value="sidewalk1" />
+		<param name="check_door_open_time" type="int" value="0" />
+		<param name="check_door_width" type="int" value="0" />
+		<param name="file_dir" type="str" value="$(find semantic_slam_db_interface)/config/" />
+	</node>
+</launch>

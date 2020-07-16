@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!-- ROSPlan turtlebot demo; requires turtlebot_gazebo -->
+<launch>
+
+
+	<!-- turtlebot simulation -->
+<!-- 	<include file="$(find mrp_cm14)/launch/cm14_movebase_redone_sim.launch" >
+	</include>
+ -->
+
+	<!-- visualisation -->
+	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rosplan_demos)/rviz/turtlebot.rviz">	</node> -->
+
+	<!-- ROSPlan -->
+	<node pkg="rosplan_demos" type="deleteDB.bash" name="deletedb" output="screen"/>
+	<include file="$(find rosplan_planning_system)/launch/interfaced_planning_system.launch" >
+		<arg name="domain_path"		value="$(find rosplan_demos)/common/domain_multi_drone.pddl" />
+	</include>
+
+	<!-- roadmap -->
+    <node name="rosplan_roadmap_server" pkg="rosplan_interface_mapping" type="rpsimplemapServer" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="data_path" value="$(find rosplan_planning_system)/common/" />
+        <param name="waypoint_file" value="$(find rosplan_demos)/scripts/waypoints_redone.txt" />
+        <param name="fixed_frame" value="map" />
+    </node>
+
+
+
+	<!-- movebase interface -->
+	<node name="rosplan_interface_movebase0" pkg="rosplan_interface_movebase" type="rpmovebase" respawn="false" output="log">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/ugv0/move_base" />
+		<param name="pddl_action_name" value="goto_waypoint0" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+	<node name="rosplan_interface_movebase1" pkg="rosplan_interface_movebase" type="rpmovebase" respawn="false" output="log">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/ugv1/move_base" />
+		<param name="pddl_action_name" value="goto_waypoint1" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+	<node name="rosplan_interface_movebase2" pkg="rosplan_interface_movebase" type="rpmovebase" respawn="false" output="log">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/ugv2/move_base" />
+		<param name="pddl_action_name" value="goto_waypoint2" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+
+	<node name="rosplan_interface_movebase3" pkg="rosplan_interface_movebase" type="rpmovebase" respawn="false" output="log">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/beyond/move_base" />
+		<param name="pddl_action_name" value="fly" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+
+
+	<node name="rosplan_interface_movebase4" pkg="rosplan_interface_movebase" type="rpmovebasedetect" respawn="false" output="log">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/beyond/detect_kid" />
+		<param name="pddl_action_name" value="detect" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+
+</launch>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="semantic_slam_db_interface" name="ses_db_interface_node" type="ses_db_interface_node" output="screen">
+		<param name="file_dir" type="str" value="$(find semantic_slam_db_interface)/config/" />
+	</node>
+</launch>

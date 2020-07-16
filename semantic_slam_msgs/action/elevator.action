@@ -1,0 +1,11 @@
+#goal definition
+int32 mode  		#1=enter, 2=leave, 3=movefloor
+int32 cur_floor 	#0,1,2,3
+int32 goal_floor	#0,1,2,3
+---
+#result definition
+int32 result	#1=ok, 0=failed
+---
+#feedback
+int32 status
+

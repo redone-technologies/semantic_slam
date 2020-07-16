@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="semantic_slam_db_interface" name="db_interface_node" type="db_interface_node" output="screen">
+		<param name="db_ip" type="str" value="192.168.0.199" />
+		<param name="db_port" type="int" value="10000" />
+	</node>
+</launch>

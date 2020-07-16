@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="instance_type"/>
+    <variable name="instance_name"/>
+  </head>
+  <results>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#robot</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#ugv</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+	<uri>http://www.ses-plan.org/convention#homepoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#hp</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#object</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#kdj_hall</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column2</uri>
+      </binding>
+    </result>    
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column17</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column8</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column18</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column3</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column1</uri>
+      </binding>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column9</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column19</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column4</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column9</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column8</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column20</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column6</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#tri_column5</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column1</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#checkpoint</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#column7</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#area</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#corridor1</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#area</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#corridor2</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="instance_type">
+        <uri>http://www.ses-plan.org/convention#area</uri>
+      </binding>
+      <binding name="instance_name">
+        <uri>http://www.ses-plan.org/convention#corridor3</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>

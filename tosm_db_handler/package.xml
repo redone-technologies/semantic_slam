@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>tosm_db_handler</name>
+  <version>0.0.2</version>
+  <description>The tosm_db_handler package</description>
+  <maintainer email="sh.joo@skku.edu">Sung-Hyeon Joo</maintainer>
+  <license>Apache 2.0</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

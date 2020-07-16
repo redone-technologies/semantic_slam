@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	<param name="owl_file_path" value="$(find tosm_db_handler)/tosm_owl/"/>
+	<param name="owl_file_name" value="pohang_v6.owl"/>
+	<param name="db_result_outdir" value="$(find semantic_slam_db_interface)/config/"/>
+	<node pkg="tosm_db_handler" type="redone_db_interface.py" name="redone_db_interface" output="screen"/>
+	<!-- <node pkg="tosm_db_handler" type="query_for_rosplan.py" name="query_for_rosplan" output="screen"/> -->
+
+</launch>

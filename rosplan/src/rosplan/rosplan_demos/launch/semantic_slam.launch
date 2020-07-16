@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node name="deleteDB" pkg="rosplan_demos" type="deleteDB.bash"/>
+
+	<include file="$(find rosplan_planning_system)/launch/interfaced_planning_system.launch" >
+		<!-- <arg name="domain_path"		value="$(find rosplan_demos)/common/ses_mission_domain.pddl" /> -->
+		<arg name="domain_path"		value="$(find rosplan_demos)/common/3th_domain_redone.pddl" />
+		
+	</include>
+
+
+	<!-- robot interface -->
+	<node name="rpgoto" pkg="rosplan_interface_movebase" type="rp_goto" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/goto" />
+		<param name="pddl_action_name" value="goto" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+
+	<node name="rpenterev" pkg="rosplan_interface_movebase" type="rp_enterev" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/enter_elevator" />
+		<param name="pddl_action_name" value="enterev" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+	<node name="rpmovefloor" pkg="rosplan_interface_movebase" type="rp_movefloor" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/move_floor" />
+		<param name="pddl_action_name" value="movefloor" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+	<node name="rpleaveev" pkg="rosplan_interface_movebase" type="rp_leaveev" respawn="false" output="screen">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/leave_elevator" />
+		<param name="pddl_action_name" value="leaveev" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+
+
+<!-- 	<node name="rpgotocheckpoint4" pkg="rosplan_interface_movebase" type="rpgotocheckpoint" respawn="false" output="log">
+		<param name="knowledge_base" value="rosplan_knowledge_base" />
+		<param name="action_server" value="/goto_checkpoint" />
+		<param name="pddl_action_name" value="leaveev" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node> -->
+</launch>

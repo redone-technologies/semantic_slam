@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="owl_file_path" value="$(find tosm_db_handler)/tosm_owl/"/>
+    <param name="owl_file_name" value="tosm.owl"/>
+    <param name="save_as_owl_file_name" value="test.owl"/>
+
+    <node pkg="tosm_db_handler" type="sample_test.py" name="test" output="screen"/>
+</launch>

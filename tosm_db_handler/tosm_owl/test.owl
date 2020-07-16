@@ -1,0 +1,877 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/ses/tosm"
+         xmlns="http://www.semanticweb.org/ses/tosm#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/ses/tosm">
+  <owl:versionIRI rdf:resource="http://www.semanticweb.org/ses/tosm/0.1.0"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The TOSM-based database for the KDJ convention center.</rdfs:comment>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#isAboveOf">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Object"/>
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#spatialRelation">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isBehindOf">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Object"/>
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isConnectedTo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  <rdfs:domain rdf:resource="#Place"/>
+  <rdfs:range rdf:resource="#Place"/>
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isInFrontOf">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Object"/>
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isInsideOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Object"/>
+        <rdf:Description rdf:about="#Place"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="#Place"/>
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isLocatedAt">
+  <rdfs:domain rdf:resource="#Robot"/>
+  <rdfs:range rdf:resource="#Place"/>
+  <rdfs:subPropertyOf rdf:resource="#robotRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#robotRelation">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isLookingAt">
+  <rdfs:domain rdf:resource="#Robot"/>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Object"/>
+        <rdf:Description rdf:about="#Place"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:subPropertyOf rdf:resource="#robotRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isNextTo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Object"/>
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isOn">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Object"/>
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#ID">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Object"/>
+        <rdf:Description rdf:about="#Place"/>
+        <rdf:Description rdf:about="#Robot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:subPropertyOf rdf:resource="#symbolicModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#symbolicModel">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#boundary">
+  <rdfs:domain rdf:resource="#Place"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#explicitModel"/>
+  <rdfs:comment>boundary</rdfs:comment>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#explicitModel">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#canBeOpen">
+  <rdfs:domain rdf:resource="#Door"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#implicitModel">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#capability">
+  <rdfs:domain rdf:resource="#Robot"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#color">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#explicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#complexity">
+  <rdfs:domain rdf:resource="#Place"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#coordinateFrame">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Object"/>
+        <rdf:Description rdf:about="#Place"/>
+        <rdf:Description rdf:about="#Robot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#explicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isKeyObject">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isLeafPlace">
+  <rdfs:domain rdf:resource="#Place"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The implicit model of Place.
+This property means the place is a leaf place that doesn't have any child place represented by isInsideOf property.</rdfs:comment>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isMovable">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isOpen">
+  <rdfs:domain rdf:resource="#Door"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#level">
+  <rdfs:domain rdf:resource="#Floor"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Object"/>
+        <rdf:Description rdf:about="#Place"/>
+        <rdf:Description rdf:about="#Robot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#symbolicModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pose">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Object"/>
+        <rdf:Description rdf:about="#Robot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#explicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#purpose">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Robot"/>
+        <rdf:Description rdf:about="#Room"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#roomNumber">
+  <rdfs:domain rdf:resource="#Room"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:subPropertyOf rdf:resource="#implicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#size">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#explicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#velocity">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Object"/>
+        <rdf:Description rdf:about="#Robot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="#explicitModel"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Object">
+  <rdfs:subClassOf rdf:resource="#EnvironmentalElement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Place">
+  <rdfs:subClassOf rdf:resource="#EnvironmentalElement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Robot">
+  <rdfs:subClassOf rdf:resource="#EnvironmentalElement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Door">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Floor">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Room">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EnvironmentalElement"/>
+
+<owl:Class rdf:about="#IndoorPlace">
+  <rdfs:subClassOf rdf:resource="#Place"/>
+  <owl:disjointWith rdf:resource="#OutdoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OutdoorPlace">
+  <rdfs:subClassOf rdf:resource="#Place"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AutomaticDoor">
+  <rdfs:subClassOf rdf:resource="#Door"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Base">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Building">
+  <rdfs:subClassOf rdf:resource="#OutdoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cafe">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Chair">
+  <rdfs:subClassOf rdf:resource="#Furniture"/>
+  <owl:disjointWith rdf:resource="#Table"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Furniture">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Table">
+  <rdfs:subClassOf rdf:resource="#Furniture"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Column">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Corridor">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Device">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Doorway">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Driver">
+  <rdfs:subClassOf rdf:resource="#Person"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Person">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Elevator">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ElevatorDoor">
+  <rdfs:subClassOf rdf:resource="#Door"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Escalator">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GuideSign">
+  <rdfs:subClassOf rdf:resource="#Sign"/>
+  <owl:disjointWith rdf:resource="#SafetySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sign">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SafetySign">
+  <rdfs:subClassOf rdf:resource="#Sign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HingedDoor">
+  <rdfs:subClassOf rdf:resource="#Door"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InformationCenter">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#KDJHall">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Occupant">
+  <rdfs:subClassOf rdf:resource="#Person"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pedestrian">
+  <rdfs:subClassOf rdf:resource="#Person"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Road">
+  <rdfs:subClassOf rdf:resource="#OutdoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sidewalk">
+  <rdfs:subClassOf rdf:resource="#OutdoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Staircase">
+  <rdfs:subClassOf rdf:resource="#IndoorPlace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VendingMachine">
+  <rdfs:subClassOf rdf:resource="#Device"/>
+  <owl:disjointWith rdf:resource="#WaterPurifier"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WaterPurifier">
+  <rdfs:subClassOf rdf:resource="#Device"/>
+</owl:Class>
+
+<rdfs:Datatype rdf:about="#explicitModelText"/>
+
+<Base rdf:about="#base1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Base>
+
+<Floor rdf:about="#floor1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isLeafPlace>
+</Floor>
+
+<Building rdf:about="#building1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isLeafPlace>
+</Building>
+
+<Cafe rdf:about="#cafe1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Cafe>
+
+<Column rdf:about="#column1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <isMovable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMovable>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Corridor rdf:about="#corridor1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isConnectedTo rdf:resource="#base1"/>
+  <isConnectedTo rdf:resource="#corridor2"/>
+  <isConnectedTo rdf:resource="#doorway1"/>
+  <isConnectedTo rdf:resource="#doorway2"/>
+  <isConnectedTo rdf:resource="#doorway3"/>
+  <isConnectedTo rdf:resource="#escalator1"/>
+  <isConnectedTo rdf:resource="#escalator2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Corridor>
+
+<Corridor rdf:about="#corridor2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isConnectedTo rdf:resource="#corridor3"/>
+  <isConnectedTo rdf:resource="#informationCenter1"/>
+  <isConnectedTo rdf:resource="#kdjHall1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Corridor>
+
+<Doorway rdf:about="#doorway1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Doorway>
+
+<Doorway rdf:about="#doorway2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Doorway>
+
+<Doorway rdf:about="#doorway3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Doorway>
+
+<Escalator rdf:about="#escalator1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Escalator>
+
+<Escalator rdf:about="#escalator2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Escalator>
+
+<Corridor rdf:about="#corridor3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isConnectedTo rdf:resource="#cafe1"/>
+  <isConnectedTo rdf:resource="#doorway4"/>
+  <isConnectedTo rdf:resource="#escalator3"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Corridor>
+
+<InformationCenter rdf:about="#informationCenter1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</InformationCenter>
+
+<KDJHall rdf:about="#kdjHall1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</KDJHall>
+
+<Doorway rdf:about="#doorway4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Doorway>
+
+<Escalator rdf:about="#escalator3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <boundary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]</boundary>
+  <isLeafPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isLeafPlace>
+</Escalator>
+
+<Column rdf:about="#column10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column12">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column13">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column14">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column15">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column16">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor3"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column18">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor3"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column19">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor3"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column20">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor3"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<Column rdf:about="#column9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#corridor1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[0.0, 0.0, 0.0, 0, 0, 0, 1]</pose>
+</Column>
+
+<ElevatorDoor rdf:about="#elevatorDoor1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#doorway4"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+</ElevatorDoor>
+
+<HingedDoor rdf:about="#hingedDoor1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#doorway1"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+</HingedDoor>
+
+<HingedDoor rdf:about="#hingedDoor2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#doorway2"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+</HingedDoor>
+
+<HingedDoor rdf:about="#hingedDoor3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <isInsideOf rdf:resource="#doorway3"/>
+  <isInsideOf rdf:resource="#floor1"/>
+  <isInsideOf rdf:resource="#building1"/>
+</HingedDoor>
+
+<Column rdf:about="#column101">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</ID>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[1.0, 2.8, 3.2, 0, 0, 0, 1]</pose>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[1, 2, 3, 0, 0, 0]</velocity>
+</Column>
+
+<Column rdf:about="#column102">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</ID>
+  <isKeyObject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isKeyObject>
+  <pose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[2.0, 2.0, 3.5, 0, 0, 0, 1]</pose>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[10, 20, 30, 0, 0, 0]</velocity>
+</Column>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#base1"/>
+    <rdf:Description rdf:about="#building1"/>
+    <rdf:Description rdf:about="#cafe1"/>
+    <rdf:Description rdf:about="#column1"/>
+    <rdf:Description rdf:about="#column10"/>
+    <rdf:Description rdf:about="#column11"/>
+    <rdf:Description rdf:about="#column12"/>
+    <rdf:Description rdf:about="#column13"/>
+    <rdf:Description rdf:about="#column14"/>
+    <rdf:Description rdf:about="#column15"/>
+    <rdf:Description rdf:about="#column16"/>
+    <rdf:Description rdf:about="#column17"/>
+    <rdf:Description rdf:about="#column18"/>
+    <rdf:Description rdf:about="#column19"/>
+    <rdf:Description rdf:about="#column2"/>
+    <rdf:Description rdf:about="#column20"/>
+    <rdf:Description rdf:about="#column3"/>
+    <rdf:Description rdf:about="#column4"/>
+    <rdf:Description rdf:about="#column5"/>
+    <rdf:Description rdf:about="#column6"/>
+    <rdf:Description rdf:about="#column7"/>
+    <rdf:Description rdf:about="#column8"/>
+    <rdf:Description rdf:about="#column9"/>
+    <rdf:Description rdf:about="#corridor1"/>
+    <rdf:Description rdf:about="#corridor2"/>
+    <rdf:Description rdf:about="#corridor3"/>
+    <rdf:Description rdf:about="#doorway1"/>
+    <rdf:Description rdf:about="#doorway2"/>
+    <rdf:Description rdf:about="#doorway3"/>
+    <rdf:Description rdf:about="#doorway4"/>
+    <rdf:Description rdf:about="#elevatorDoor1"/>
+    <rdf:Description rdf:about="#escalator1"/>
+    <rdf:Description rdf:about="#escalator2"/>
+    <rdf:Description rdf:about="#escalator3"/>
+    <rdf:Description rdf:about="#floor1"/>
+    <rdf:Description rdf:about="#informationCenter1"/>
+    <rdf:Description rdf:about="#kdjHall1"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Object"/>
+    <rdf:Description rdf:about="#Place"/>
+    <rdf:Description rdf:about="#Robot"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Driver"/>
+    <rdf:Description rdf:about="#Occupant"/>
+    <rdf:Description rdf:about="#Pedestrian"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Device"/>
+    <rdf:Description rdf:about="#Door"/>
+    <rdf:Description rdf:about="#Furniture"/>
+    <rdf:Description rdf:about="#Person"/>
+    <rdf:Description rdf:about="#Sign"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Cafe"/>
+    <rdf:Description rdf:about="#Corridor"/>
+    <rdf:Description rdf:about="#Doorway"/>
+    <rdf:Description rdf:about="#Elevator"/>
+    <rdf:Description rdf:about="#Floor"/>
+    <rdf:Description rdf:about="#Room"/>
+    <rdf:Description rdf:about="#Staircase"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Building"/>
+    <rdf:Description rdf:about="#Road"/>
+    <rdf:Description rdf:about="#Sidewalk"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#AutomaticDoor"/>
+    <rdf:Description rdf:about="#ElevatorDoor"/>
+    <rdf:Description rdf:about="#HingedDoor"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>

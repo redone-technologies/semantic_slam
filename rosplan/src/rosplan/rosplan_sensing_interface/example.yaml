@@ -1,0 +1,8 @@
+functions:
+    - $(find rosplan_sensing_interface)/example.py
+    #- /home/gerard/Dropbox/rosplan_sensing_interface/example.py
+topics:
+    robot_at:
+        - params kenny *
+        - /amcl_pose
+        - geometry_msgs/PoseWithCovarianceStamped

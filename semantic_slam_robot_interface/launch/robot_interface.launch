@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="semantic_slam_robot_interface" name="robot_interface_node" type="robot_interface_node" output="screen">
+	</node>
+</launch>
