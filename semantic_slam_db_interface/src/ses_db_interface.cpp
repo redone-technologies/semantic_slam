@@ -231,7 +231,7 @@ int main(int argc, char** argv)
 	ros::Subscriber planstate_sub = n.subscribe("plan_sequency_state",1,&PlanSequencyStateCB);
 	// ros::Publisher ready_pub_ = n.advertise<std_msgs::Int32>("ready_to_run", 1);
 
-	n.param<std::string>("file_dir", filepath, "/home/msi/catkin_ws/src/semantic_slam/semantic_slam_db_interface/config/");
+	n.param<std::string>("/ses_db_interface_node/file_dir", filepath, "/home/msi/catkin_ws/src/semantic_slam/semantic_slam_db_interface/config/");
 	
 
 	int parsingDone = 0;

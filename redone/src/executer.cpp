@@ -331,7 +331,7 @@ int main(int argc, char** argv)
 	n.param<std::string>("/executer_node/goal", target_goal, "room33");
 	n.param("/executer_node/check_door_width", ENABLE_ROBOT_SIZE, 0);
 	n.param("/executer_node/check_door_open_time", ENABLE_DOOR_OPEN_TIME, 0);
-	n.param<std::string>("file_dir", filepath, "/home/msi/catkin_ws/src/semantic_slam/semantic_slam_db_interface/config/");
+	n.param<std::string>("/executer_node/file_dir", filepath, "/home/msi/catkin_ws/src/semantic_slam/semantic_slam_db_interface/config/");
 	
 
 	printf("---robot_name : %s\n", robotname.c_str());
